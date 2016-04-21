@@ -20,12 +20,13 @@ public class MainActivity extends AppCompatActivity
         this.inputTF = (EditText)this.findViewById(R.id.inputTF);
         this.outputText = (TextView)this.findViewById(R.id.outputText);
 
-        this.inputTF.setText("blah");
+        this.inputTF.setText("4+2*3-2");
     }
 
     public void shuntingYardButtonPressed(View v)
     {
         ShuntingYard sy = new ShuntingYard(this.inputTF.getText().toString());
-        this.outputText.setText(sy.getAnswer());
+        String answer = sy.getAnswer();
+        this.outputText.setText(answer);
     }
 }
